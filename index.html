@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MyLearn Student Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+
+<div id="loginPage" class="page">
+
+<h1>MyLearn Portal</h1>
+
+<input id="username" placeholder="Username">
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p id="error"></p>
+
+</div>
+
+
+<!-- DASHBOARD -->
+
+<div id="dashboard" class="page">
+
+<h1 id="welcome"></h1>
+
+<h2>Courses</h2>
+
+<div class="courses">
+
+<div class="course">
+<h3>HTML Basics</h3>
+<p>Learn web page structure</p>
+<button onclick="openCourse('html')">Open</button>
+</div>
+
+<div class="course">
+<h3>CSS Styling</h3>
+<p>Learn web design</p>
+<button onclick="openCourse('css')">Open</button>
+</div>
+
+<div class="course">
+<h3>JavaScript</h3>
+<p>Learn website interactivity</p>
+<button onclick="openCourse('js')">Open</button>
+</div>
+
+</div>
+
+<button onclick="logout()">Logout</button>
+
+</div>
+
+
+<!-- COURSE -->
+
+<div id="coursePage" class="page">
+
+<h1 id="courseTitle"></h1>
+
+<p id="courseDesc"></p>
+
+<h3>Topics</h3>
+
+<ul id="courseTopics"></ul>
+
+<h3>Course Video</h3>
+
+<iframe id="courseVideo" width="560" height="315"></iframe>
+
+<br><br>
+
+<button id="watchBtn" onclick="enableQuiz()">I Watched Video</button>
+
+<br><br>
+
+<button id="quizBtn" onclick="startQuiz()" disabled>Start Quiz</button>
+
+<br><br>
+
+<button onclick="goDashboard()">Back</button>
+
+</div>
+
+
+<!-- QUIZ -->
+
+<div id="quizPage" class="page">
+
+<h2 id="question"></h2>
+
+<div id="options"></div>
+
+<br>
+
+<button onclick="nextQuestion()">Next</button>
+
+</div>
+
+
+<!-- CERTIFICATE -->
+
+<div id="certificatePage" class="page">
+
+<div class="certificate">
+
+<h1>Certificate of Completion</h1>
+
+<p>This certificate is presented to</p>
+
+<h2 id="certName"></h2>
+
+<p>For completing</p>
+
+<h3 id="certCourse"></h3>
+
+<p id="certScore"></p>
+
+</div>
+
+<br>
+
+<button onclick="goDashboard()">Back to Dashboard</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
